@@ -1,186 +1,158 @@
-# Algoviz
+# Algoviz 🪐
 
-Interactive visualizations for computer science concepts. Built with Next.js 16, TypeScript, and Tailwind CSS.
+> **Interactive Computer Science & Artificial Intelligence Playground featuring 23 interactive modules across Algorithms, Data Structures, Distributed Systems, and Machine Learning.**
 
-**Live demo:** [https://algoviz-rho.vercel.app](https://algoviz-rho.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-R3F-black?style=flat-square&logo=three.js)](https://docs.pmnd.rs/react-three-fiber)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Deployment](https://img.shields.io/badge/Vercel-Live-success?style=flat-square&logo=vercel)](https://algoviz-rho.vercel.app)
 
-![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=flat-square&logo=tailwindcss)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+[🌐 Canlı Demoyu İncele (Live Demo)](https://algoviz-rho.vercel.app)
 
-## Overview
+---
 
-Algoviz is an educational platform designed to help students and developers understand complex computer science concepts through interactive visualizations. Each module provides step-by-step animations and hands-on controls.
+## 📸 Görsel Vitrin (Visual Showcase)
 
-## Interactive Modules (12 live)
+### 1. 3D WebGL Loss Landscapes & Gradient Descent
 
-| Category | Module | Route | Highlights |
-|----------|--------|-------|------------|
-| **Algorithms** | Pathfinding | `/algorithms/pathfinding` | Dijkstra/BFS, A*, maze generation |
-| **Algorithms** | Sorting | `/algorithms/sorting` | Bubble, Quick, Merge sort animations |
-| **Data Structures** | Binary Search Tree | `/data-structures/trees` | Insert, find, in/pre/post-order traversal |
-| **Databases** | B-Tree Indexing | `/databases/b-tree` | Insert, search, split animations |
-| **System Design** | Load Balancing | `/system-design/load-balancing` | Round Robin, Random, Least Connections |
-| **Operating Systems** | CPU Scheduling | `/operating-systems/cpu-scheduling` | FCFS, SJF, Round Robin Gantt charts |
-| **Networking** | DNS Lookup | `/networking/dns-lookup` | Root → TLD → Authoritative resolution |
-| **Security** | Cryptography | `/security/cryptography` | SHA-256 hashing, encryption demo |
-| **Security** | Diffie-Hellman | `/security/diffie-hellman` | Key exchange with color mixing metaphor |
-| **Security** | SQL Injection | `/security/sql-injection` | Vulnerable vs. prepared statement comparison |
-| **AI & ML** | K-Means Clustering | `/ai-ml/k-means` | Centroid movement and cluster assignment |
-| **AI & ML** | Neural Network | `/ai-ml/neural-network` | MLP training on XOR with decision boundary |
+![3D Gradient Descent](docs/screenshots/gradient-descent.png)
 
-> **Coming soon:** Searching, Graphs, Linked Lists, LRU Cache, Caching, Raft Consensus
+*Three.js ve WebGL ile 360° dönebilen parametrik yüzeyler (Convex, Saddle, Rosenbrock) üzerinde gerçek zamanlı parçacık optimizasyonu ve yörünge takibi.*
 
-## Features
+### 2. Transformer Self-Attention Visualizer
 
-### Algorithms
-- **Pathfinding** — Dijkstra's and A* algorithms with grid-based visualization
-- **Sorting** — Bubble Sort, Quick Sort, Merge Sort with animated comparisons
-- **Searching** — Binary Search and Linear Search *(coming soon)*
+![Self-Attention](docs/screenshots/self-attention.png)
 
-### Data Structures
-- **Binary Search Tree** — Insert, find, and traverse operations
-- **Graphs** — Adjacency representation and traversal *(coming soon)*
-- **Linked Lists** — Node manipulation and pointer visualization *(coming soon)*
+*Q, K, V matris projeksiyonları, Scaled Dot-Product, satır bazlı Softmax sıcaklık kontrolü, iki taraflı bağlantı grafiği ve N×N attention ısı haritası.*
 
-### Databases
-- **B-Tree Indexing** — Order-2 B-Tree with split and search animations
-- **LRU Cache** — Eviction policy visualization *(coming soon)*
+### 3. Raft Distributed Consensus
 
-### System Design
-- **Load Balancing** — Round Robin, Random, and Least Connections strategies
-- **Caching** — Cache hit/miss visualization *(coming soon)*
+![Raft Consensus](docs/screenshots/raft-consensus.png)
 
-### Distributed Systems
-- **Raft Consensus** — Leader election and log replication *(coming soon)*
+*5 düğümlü küme simülasyonu; seçim zamanlayıcıları, heartbeat sinyalleri, çoğunluk (quorum) onaylı log kopyalama ve dinamik düğüm çökertme.*
 
-### Operating Systems
-- **CPU Scheduling** — FCFS, SJF, and Round Robin algorithms
+---
 
-### Networking
-- **DNS Lookup** — Root → TLD → Authoritative resolution chain
+## ⚡ Temel Mimari Prensipler
 
-### Security
-- **Cryptography** — SHA-256 hashing and public/private key concepts
-- **Diffie-Hellman** — Key exchange using color mixing metaphor
-- **SQL Injection** — Vulnerable raw queries vs. parameterized prepared statements
+1. **23/23 Tam Teşekküllü Modül:** Sitede hiçbir "Coming Soon" veya stub rota bulunmaz; tüm modüller bağımsız matematiksel motorlarla çalışır.
+2. **Sıfır Sunucu Yükü (Client-Side Realtime):** Tüm analitik gradyanlar ($\nabla f$), matris çarpımları, çizge gezinmeleri ve ayrık olay simülasyonları doğrudan tarayıcıda 60 FPS akıcılıkla hesaplanır.
+3. **Seçici WebGL & Hibrit Render:** Tipografik ve matrisel okunabilirliğin kritik olduğu yerlerde SVG/DOM; 3. boyutun gerektiği optimizasyon yüzeylerinde ise `@react-three/fiber` dinamik import (`ssr: false`) ile kullanılır.
+4. **Zaman Yolculuğu & Durum Kontrolü (Time-Travel Debugging):** Zustand durum yönetim katmanı sayesinde her algoritma adım adım ileri/geri sarılabilir veya oynatılabilir.
 
-### AI & Machine Learning
-- **K-Means Clustering** — Animated centroid movement and cluster assignment
-- **Neural Network** — MLP training on XOR problem with decision boundary
+---
 
-## Tech Stack
+## 🧩 Modül Kataloğu (23 Modül)
 
-| Category | Technology |
-|----------|------------|
-| Framework | Next.js 16 (App Router) |
-| Language | TypeScript |
-| Styling | Tailwind CSS 4 |
-| State | Zustand |
-| Animation | Framer Motion |
-| Icons | Lucide React |
+### 🧠 Artificial Intelligence & Machine Learning (7 Modül)
 
-## Getting Started
+- **[Gradient Descent (2D & 3D)](https://algoviz-rho.vercel.app/ai-ml/gradient-descent):** Analitik gradyanlar ($\nabla f$), SGD, Momentum, RMSprop, Adam; 3D Three.js WebGL yüzeyi.
+- **[Self-Attention Visualizer](https://algoviz-rho.vercel.app/ai-ml/attention):** $Q, K, V$ projeksiyonları, Scaled Dot-Product, Softmax sıcaklığı, $N \times N$ ısı haritası.
+- **[CNN Convolution Explorer](https://algoviz-rho.vercel.app/ai-ml/cnn-convolution):** $10 \times 10$ çizilebilir ızgara, 3×3 çekirdekler (Sobel, Blur, Sharpen), $\sum(I \odot K)$, ReLU, 2×2 Max Pooling.
+- **[Decision Tree Playground](https://algoviz-rho.vercel.app/ai-ml/decision-tree):** CART algoritması, Gini Impurity vs. Entropy, interaktif Max Depth ile Overfitting / Underfitting sınırları.
+- **[PCA (Dimensionality Reduction)](https://algoviz-rho.vercel.app/ai-ml/pca):** Kovaryans matrisi hesabı, analitik özvektörler ($v_1, v_2$), varyans oranları ve 1D izdüşüm animasyonu.
+- **[K-Means Clustering](https://algoviz-rho.vercel.app/ai-ml/k-means):** Voronoi hücreleri, dinamik centroid güncellemeleri ve Lloyd optimizasyonu.
+- **[Neural Network Playground](https://algoviz-rho.vercel.app/ai-ml/neural-network):** MLP ileri/geri yayılım (Backpropagation) ve ağırlık adaptasyonu.
 
-### Prerequisites
+### 🌐 Distributed Systems & Architecture (3 Modül)
 
-- Node.js 18+
-- npm or yarn
+- **[Raft Consensus](https://algoviz-rho.vercel.app/distributed-systems/raft):** 5 düğümlü kümede lider seçimi, heartbeat sinyalleri, çoğunluk onaylı log replikasyonu ve düğüm çökertme.
+- **[LRU Cache Visualizer](https://algoviz-rho.vercel.app/databases/lru-cache):** $O(1)$ Hash Map + Doubly Linked List hibrit mimarisi, `layoutId` animasyonlu MRU geçişleri ve tahliye (Eviction).
+- **[Caching Strategies](https://algoviz-rho.vercel.app/system-design/caching):** 4 katmanlı topolojide Cache-Aside, Write-Through ve Write-Back stratejilerinin veri tutarlılığı farkları.
 
-### Installation
+### 🌲 Data Structures & Databases (4 Modül)
+
+- **[Graphs](https://algoviz-rho.vercel.app/data-structures/graphs):** Yönlü/ağırlıklı çizge tuvali; BFS (Queue), DFS (Call Stack), Dijkstra (Priority Queue).
+- **[Linked Lists](https://algoviz-rho.vercel.app/data-structures/linked-lists):** Singly, Doubly, Circular; listeyi tersine çevirme ve Floyd's Cycle Detection (Kaplumbağa & Tavşan).
+- **[Binary Search Tree](https://algoviz-rho.vercel.app/data-structures/trees):** Ekleme, arama, silme ve in/pre/post-order dolaşım.
+- **[B-Tree Indexing](https://algoviz-rho.vercel.app/databases/b-tree):** Düğüm bölme, arama ve dengeli ekleme animasyonları.
+
+### ⚡ Classical Algorithms (3 Modül)
+
+- **[Searching](https://algoviz-rho.vercel.app/algorithms/searching):** Linear ($O(N)$), Binary ($O(\log N)$) ve Interpolation ($O(\log \log N)$) karşılaştırması.
+- **[Sorting](https://algoviz-rho.vercel.app/algorithms/sorting):** Quick, Merge, Bubble, Insertion ve Selection sort adımları.
+- **[Pathfinding](https://algoviz-rho.vercel.app/algorithms/pathfinding):** $A^*$ ve Dijkstra ile ızgara engellerini aşma.
+
+### 🛡️ Systems, Networking & Security (6 Modül)
+
+- **[Load Balancing](https://algoviz-rho.vercel.app/system-design/load-balancing):** Round Robin, Random ve Least Connections stratejileri.
+- **[CPU Scheduling](https://algoviz-rho.vercel.app/operating-systems/cpu-scheduling):** FCFS, SJF ve Round Robin Gantt şemaları.
+- **[DNS Lookup](https://algoviz-rho.vercel.app/networking/dns-lookup):** Root → TLD → Authoritative çözümleme zinciri.
+- **[Cryptography](https://algoviz-rho.vercel.app/security/cryptography):** SHA-256 hashing ve genel/özel anahtar kavramları.
+- **[Diffie-Hellman](https://algoviz-rho.vercel.app/security/diffie-hellman):** Renk karıştırma metaforuyla anahtar değişimi.
+- **[SQL Injection](https://algoviz-rho.vercel.app/security/sql-injection):** Kırılgan ham sorgular vs. parameterized prepared statements.
+
+---
+
+## 🛠 Tech Stack
+
+| Katman | Teknoloji |
+|--------|-----------|
+| Framework | Next.js 16 (App Router) + React 19 |
+| Dil | TypeScript (strict) |
+| Stil | Tailwind CSS v4 |
+| 3D / WebGL | Three.js, `@react-three/fiber`, `@react-three/drei` |
+| Durum | Zustand |
+| Animasyon | Framer Motion |
+| Dağıtım | Vercel |
+
+---
+
+## 📂 Proje Dizin Yapısı
+
+```text
+algoviz/
+├── app/                      # Next.js 16 App Router rotaları
+│   ├── ai-ml/                # Yapay Zeka & ML sayfaları
+│   ├── algorithms/           # Temel algoritma sayfaları
+│   ├── data-structures/      # Veri yapısı sayfaları
+│   ├── databases/            # B-Tree & LRU Cache
+│   ├── distributed-systems/  # Raft Consensus
+│   ├── networking/           # DNS Lookup
+│   ├── operating-systems/    # CPU Scheduling
+│   ├── security/             # Kriptografi, DH, SQL Injection
+│   └── system-design/        # Load Balancing & Caching
+├── components/
+│   ├── visualizers/          # 2D SVG & 3D Three.js görselleştiriciler
+│   ├── Sidebar.tsx
+│   └── PageHeader.tsx
+├── docs/
+│   └── screenshots/          # README & portfolyo ekran görüntüleri
+├── lib/                      # Pür matematik, analitik gradyan ve algoritma motorları
+└── store/                    # Zustand durum makineleri
+```
+
+---
+
+## 🚀 Getting Started
+
+**Gereksinimler:** Node.js 18+, npm.
 
 ```bash
-# Clone the repository
 git clone https://github.com/berkayozgun/algoviz.git
 cd algoviz
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build for Production
+Tarayıcıda [http://localhost:3000](http://localhost:3000) adresini açın.
 
 ```bash
 npm run build
 npm start
 ```
 
-## Project Structure
+---
 
-```
-├── app/                    # Next.js App Router pages
-│   ├── algorithms/         # Algorithm visualizers
-│   ├── data-structures/    # Data structure visualizers
-│   ├── databases/          # Database concept visualizers
-│   ├── security/           # Security visualizers
-│   ├── ai-ml/              # ML visualizers
-│   └── ...
-├── components/
-│   ├── visualizers/        # Core visualization components
-│   ├── Sidebar.tsx         # Navigation sidebar
-│   └── PageHeader.tsx      # Page header component
-├── store/                  # Zustand state stores
-└── lib/                    # Utility functions
-```
+## 📄 License
 
-## Deployment
+MIT — ayrıntılar için [LICENSE](LICENSE).
 
-### Vercel (Recommended)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/berkayozgun/algoviz)
-
-```bash
-# Using Vercel CLI
-npm i -g vercel
-vercel
-```
-
-### Docker
-
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
-## Design Philosophy
-
-- **Engineering Aesthetic** — Clean, matte surfaces with micro-borders
-- **Desaturated Palette** — Zinc-based colors for reduced eye strain
-- **Light Typography** — Font-light headings, zinc-200 text
-- **Subtle Patterns** — 5% opacity dot pattern background
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
+## 👤 Author
 
 **Berkay Özgün**
 
 - GitHub: [@berkayozgun](https://github.com/berkayozgun)
-
----
-
-Built with ❤️ using Next.js
+- Live: [algoviz-rho.vercel.app](https://algoviz-rho.vercel.app)
