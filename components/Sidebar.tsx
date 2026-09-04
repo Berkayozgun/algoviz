@@ -94,6 +94,8 @@ const navigation: NavCategory[] = [
             { label: 'Gradient Descent', href: '/ai-ml/gradient-descent' },
             { label: 'Self-Attention', href: '/ai-ml/attention' },
             { label: 'CNN Convolution', href: '/ai-ml/cnn-convolution' },
+            { label: 'Decision Tree', href: '/ai-ml/decision-tree' },
+            { label: 'PCA (Dimensionality Reduction)', href: '/ai-ml/pca' },
         ],
     },
 ];
@@ -196,7 +198,7 @@ export default function Sidebar() {
             {/* Footer */}
             <div className="p-4 border-t border-zinc-800 text-xs text-zinc-600">
                 <div className="flex items-center justify-between">
-                    <span>15 modules</span>
+                    <span>18 modules</span>
                     <span className="font-mono">Berkay Özgün</span>
                 </div>
             </div>
