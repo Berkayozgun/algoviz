@@ -68,7 +68,7 @@ const categories = [
     icon: Brain,
     description: 'Machine learning and neural networks.',
     href: '/ai-ml/k-means',
-    items: ['K-Means', 'Neural Network'],
+    items: ['K-Means', 'Neural Network', 'Gradient Descent'],
   },
 ];
 
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="mt-6 flex gap-6 text-sm">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-              <span className="text-zinc-400">12 modules</span>
+              <span className="text-zinc-400">13 modules</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-zinc-600"></span>

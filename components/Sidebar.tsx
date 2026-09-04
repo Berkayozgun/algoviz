@@ -91,6 +91,7 @@ const navigation: NavCategory[] = [
         items: [
             { label: 'K-Means Clustering', href: '/ai-ml/k-means' },
             { label: 'Neural Network', href: '/ai-ml/neural-network' },
+            { label: 'Gradient Descent', href: '/ai-ml/gradient-descent' },
         ],
     },
 ];
@@ -193,7 +194,7 @@ export default function Sidebar() {
             {/* Footer */}
             <div className="p-4 border-t border-zinc-800 text-xs text-zinc-600">
                 <div className="flex items-center justify-between">
-                    <span>12 modules</span>
+                    <span>13 modules</span>
                     <span className="font-mono">Berkay Özgün</span>
                 </div>
             </div>
