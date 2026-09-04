@@ -15,9 +15,27 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://algoviz-rho.vercel.app";
+const siteDescription =
+  "Algoviz is an interactive computer science visualizer. Explore algorithms, data structures, databases, security, networking, and machine learning through hands-on animations and step-by-step demos.";
+
 export const metadata: Metadata = {
-  title: "CS Playground - Interactive Visualizations",
-  description: "Interactive visualizations for algorithms, data structures, and computer science concepts",
+  metadataBase: new URL(siteUrl),
+  title: "Algoviz — Interactive Computer Science Visualizer",
+  description: siteDescription,
+  openGraph: {
+    title: "Algoviz — Interactive Computer Science Visualizer",
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "Algoviz",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Algoviz — Interactive Computer Science Visualizer",
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({

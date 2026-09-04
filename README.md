@@ -1,6 +1,8 @@
-# CS Playground
+# Algoviz
 
 Interactive visualizations for computer science concepts. Built with Next.js 16, TypeScript, and Tailwind CSS.
+
+**Live demo:** [https://algoviz-rho.vercel.app](https://algoviz-rho.vercel.app)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
@@ -9,30 +11,49 @@ Interactive visualizations for computer science concepts. Built with Next.js 16,
 
 ## Overview
 
-CS Playground is an educational platform designed to help students and developers understand complex computer science concepts through interactive visualizations. Each module provides step-by-step animations and hands-on controls.
+Algoviz is an educational platform designed to help students and developers understand complex computer science concepts through interactive visualizations. Each module provides step-by-step animations and hands-on controls.
+
+## Interactive Modules (12 live)
+
+| Category | Module | Route | Highlights |
+|----------|--------|-------|------------|
+| **Algorithms** | Pathfinding | `/algorithms/pathfinding` | Dijkstra/BFS, A*, maze generation |
+| **Algorithms** | Sorting | `/algorithms/sorting` | Bubble, Quick, Merge sort animations |
+| **Data Structures** | Binary Search Tree | `/data-structures/trees` | Insert, find, in/pre/post-order traversal |
+| **Databases** | B-Tree Indexing | `/databases/b-tree` | Insert, search, split animations |
+| **System Design** | Load Balancing | `/system-design/load-balancing` | Round Robin, Random, Least Connections |
+| **Operating Systems** | CPU Scheduling | `/operating-systems/cpu-scheduling` | FCFS, SJF, Round Robin Gantt charts |
+| **Networking** | DNS Lookup | `/networking/dns-lookup` | Root → TLD → Authoritative resolution |
+| **Security** | Cryptography | `/security/cryptography` | SHA-256 hashing, encryption demo |
+| **Security** | Diffie-Hellman | `/security/diffie-hellman` | Key exchange with color mixing metaphor |
+| **Security** | SQL Injection | `/security/sql-injection` | Vulnerable vs. prepared statement comparison |
+| **AI & ML** | K-Means Clustering | `/ai-ml/k-means` | Centroid movement and cluster assignment |
+| **AI & ML** | Neural Network | `/ai-ml/neural-network` | MLP training on XOR with decision boundary |
+
+> **Coming soon:** Searching, Graphs, Linked Lists, LRU Cache, Caching, Raft Consensus
 
 ## Features
 
 ### Algorithms
 - **Pathfinding** — Dijkstra's and A* algorithms with grid-based visualization
 - **Sorting** — Bubble Sort, Quick Sort, Merge Sort with animated comparisons
-- **Searching** — Binary Search and Linear Search
+- **Searching** — Binary Search and Linear Search *(coming soon)*
 
 ### Data Structures
 - **Binary Search Tree** — Insert, find, and traverse operations
-- **Graphs** — Adjacency representation and traversal
-- **Linked Lists** — Node manipulation and pointer visualization
+- **Graphs** — Adjacency representation and traversal *(coming soon)*
+- **Linked Lists** — Node manipulation and pointer visualization *(coming soon)*
 
 ### Databases
-- **B-Tree Indexing** — Order-2 B-Tree with split animations
-- **LRU Cache** — Eviction policy visualization
+- **B-Tree Indexing** — Order-2 B-Tree with split and search animations
+- **LRU Cache** — Eviction policy visualization *(coming soon)*
 
 ### System Design
 - **Load Balancing** — Round Robin, Random, and Least Connections strategies
-- **Caching** — Cache hit/miss visualization
+- **Caching** — Cache hit/miss visualization *(coming soon)*
 
 ### Distributed Systems
-- **Raft Consensus** — Leader election and log replication
+- **Raft Consensus** — Leader election and log replication *(coming soon)*
 
 ### Operating Systems
 - **CPU Scheduling** — FCFS, SJF, and Round Robin algorithms
@@ -43,7 +64,7 @@ CS Playground is an educational platform designed to help students and developer
 ### Security
 - **Cryptography** — SHA-256 hashing and public/private key concepts
 - **Diffie-Hellman** — Key exchange using color mixing metaphor
-- **SQL Injection** — Live query preview and vulnerability detection
+- **SQL Injection** — Vulnerable raw queries vs. parameterized prepared statements
 
 ### AI & Machine Learning
 - **K-Means Clustering** — Animated centroid movement and cluster assignment
@@ -71,8 +92,8 @@ CS Playground is an educational platform designed to help students and developer
 
 ```bash
 # Clone the repository
-git clone https://github.com/berkayozgun/cs-playground.git
-cd cs-playground
+git clone https://github.com/berkayozgun/algoviz.git
+cd algoviz
 
 # Install dependencies
 npm install
@@ -112,7 +133,7 @@ npm start
 
 ### Vercel (Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/berkayozgun/cs-playground)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/berkayozgun/algoviz)
 
 ```bash
 # Using Vercel CLI

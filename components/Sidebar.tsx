@@ -124,7 +124,7 @@ export default function Sidebar() {
                     <Terminal className="w-4 h-4 text-zinc-400" />
                 </div>
                 <div>
-                    <h1 className="text-base font-normal text-zinc-100">CS Playground</h1>
+                    <h1 className="text-base font-normal text-zinc-100">Algoviz</h1>
                     <p className="text-[10px] text-zinc-600 font-mono">v1.0</p>
                 </div>
             </Link>

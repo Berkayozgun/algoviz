@@ -79,7 +79,7 @@ export default function Home() {
       <section className="pt-16 pb-12 px-8">
         <div className="max-w-4xl">
           <h1 className="text-4xl font-light text-zinc-100 mb-3">
-            CS Playground
+            Algoviz
           </h1>
           <p className="text-lg text-zinc-500 font-light">
             Interactive visualizations for computer science concepts.
