@@ -198,7 +198,7 @@ export default function Sidebar() {
             {/* Footer */}
             <div className="p-4 border-t border-zinc-800 text-xs text-zinc-600">
                 <div className="flex items-center justify-between">
-                    <span>18 modules</span>
+                    <span>23 modules</span>
                     <span className="font-mono">Berkay Özgün</span>
                 </div>
             </div>

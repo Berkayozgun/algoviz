@@ -1,16 +1,15 @@
 import PageHeader from '@/components/PageHeader';
+import CachingVisualizer from '@/components/visualizers/CachingVisualizer';
 
 export default function CachingPage() {
     return (
         <div className="p-8 text-slate-100">
             <PageHeader
-                title="Caching"
-                description="Explore caching strategies and eviction policies like LRU, LFU, and FIFO. Understand how caching improves system performance and reduces latency."
-                tags={['LRU', 'LFU', 'FIFO', 'Cache Invalidation', 'TTL']}
+                title="Caching Strategies"
+                description="Client, API, Cache ve Database katmanları arasındaki veri akışını keşfedin. Cache-Aside, Write-Through ve Write-Back stratejilerini karşılaştırın."
+                tags={['Cache-Aside', 'Write-Through', 'Write-Back', 'Redis', 'Consistency']}
             />
-            <div className="flex items-center justify-center h-64 bg-slate-900/30 border border-slate-800 rounded-2xl">
-                <p className="text-slate-500 text-lg">🚧 Coming Soon...</p>
-            </div>
+            <CachingVisualizer />
         </div>
     );
 }

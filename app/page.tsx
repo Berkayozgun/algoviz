@@ -89,7 +89,7 @@ export default function Home() {
           <div className="mt-6 flex gap-6 text-sm">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-              <span className="text-zinc-400">18 modules</span>
+              <span className="text-zinc-400">23 modules</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-zinc-600"></span>
