@@ -1,6 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { useGradientDescentStore } from '@/store/useGradientDescentStore';
 import {
@@ -14,6 +15,21 @@ import {
     type OptimizerType,
     type SurfaceType,
 } from '@/lib/optimization';
+import { cn } from '@/lib/utils';
+
+const LossLandscape3D = dynamic(() => import('./LossLandscape3D'), {
+    ssr: false,
+    loading: () => (
+        <div
+            className="flex items-center justify-center bg-slate-950 border border-slate-800 rounded-2xl text-slate-500 text-sm"
+            style={{ width: 480, height: 480 }}
+        >
+            3D sahne yükleniyor…
+        </div>
+    ),
+});
+
+type ViewMode = '2d' | '3d';
 
 const CANVAS_SIZE = 480;
 const GRID_SIZE = 40;
@@ -32,6 +48,8 @@ const OPTIMIZER_LABELS: Record<OptimizerType, string> = {
 };
 
 export default function GradientDescentVisualizer() {
+    const [viewMode, setViewMode] = useState<ViewMode>('2d');
+
     const {
         surfaceType,
         optimizer,
@@ -265,8 +283,37 @@ export default function GradientDescentVisualizer() {
                 )}
             </div>
 
+            {/* View mode toggle */}
+            <div className="flex justify-center">
+                <div className="flex items-center gap-1 bg-slate-800 rounded-xl p-1">
+                    <button
+                        onClick={() => setViewMode('2d')}
+                        className={cn(
+                            'px-4 py-2 rounded-lg text-xs font-bold transition-all',
+                            viewMode === '2d'
+                                ? 'bg-violet-600 text-white'
+                                : 'text-slate-400 hover:text-slate-200'
+                        )}
+                    >
+                        2D Contour Map
+                    </button>
+                    <button
+                        onClick={() => setViewMode('3d')}
+                        className={cn(
+                            'px-4 py-2 rounded-lg text-xs font-bold transition-all',
+                            viewMode === '3d'
+                                ? 'bg-violet-600 text-white'
+                                : 'text-slate-400 hover:text-slate-200'
+                        )}
+                    >
+                        3D WebGL Landscape (Three.js)
+                    </button>
+                </div>
+            </div>
+
             {/* Visualization */}
             <div className="flex justify-center">
+                {viewMode === '2d' ? (
                 <div
                     className="relative bg-slate-900/50 border border-slate-800 rounded-2xl overflow-hidden cursor-crosshair"
                     style={{ width: CANVAS_SIZE, height: CANVAS_SIZE }}
@@ -411,6 +458,9 @@ export default function GradientDescentVisualizer() {
                         Haritaya tıklayarak başlangıç noktası seçin
                     </div>
                 </div>
+                ) : (
+                    <LossLandscape3D />
+                )}
             </div>
 
             {/* Color legend */}

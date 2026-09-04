@@ -6,7 +6,8 @@ import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import {
     Zap, Boxes, Database, Cloud, GitBranch, Cpu, Globe, Shield, Brain,
-    ChevronDown, ChevronRight, Menu, X, Terminal
+    ChevronDown, ChevronRight, Menu, X, Terminal,
+    type LucideIcon,
 } from 'lucide-react';
 
 interface NavItem {
@@ -16,7 +17,7 @@ interface NavItem {
 
 interface NavCategory {
     title: string;
-    icon: React.ElementType;
+    icon: LucideIcon;
     items: NavItem[];
 }
 
